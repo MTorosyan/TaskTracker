@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "TaskTrackerConnectionString": "Server=(localdb)\\mssqllocaldb;Database=TaskTrackerDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  }
+}

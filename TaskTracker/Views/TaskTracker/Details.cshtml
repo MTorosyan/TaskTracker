@@ -1,0 +1,55 @@
+﻿@model TaskTracker.Data.Models.TaskItem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TaskItemViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal card bg-faded">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedTaskTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedTaskTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStarted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateStarted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFinished)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateFinished)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+    </dl>
+    </div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TaskID }) |
+    @Html.ActionLink("Home", "Index", new {})
+    
+</div>

@@ -1,0 +1,35 @@
+<h1 class="h1">Welcome to the TaskTracker Website</h1>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-6 md-offset-3">
+<form class="form" #taskForm>
+  
+<table class="table table-responsive">
+  <tr>
+    <th>Task Id</th>
+    <th>Task Name</th>
+    <th>Task Description</th>
+    <th>Estimate Task Time</th>
+    <th>Date Started</th>
+    <th>Date Finished</th>
+    <th>Comment</th>
+  </tr>
+  <tr *ngFor="let t of taskList">
+    <td>{{t.taskID}}</td>
+    <td>{{t.taskName}}</td>
+    <td>{{t.taskDescription}}</td>
+    <td>{{t.estimateTaskTime}}</td>
+    <td>{{t.dateStarted}}</td>
+    <td>{{t.dateFinished}}</td>
+    <td>{{t.comment}}</td>
+    <td><button (click)="editTask(t.taskID)" class="btn btn-warning">Edit Task</button></td>
+    <td><button (click)="deleteTask(t.taskID)" class="btn btn-danger">Delete</button></td>
+  </tr>
+</table>
+<button (click)="createTask(t.taskID)" class="btn btn-success">Create New Task</button>
+</form>
+</div>
+</div>
+</div>
